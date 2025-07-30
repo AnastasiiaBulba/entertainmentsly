@@ -52,7 +52,9 @@
   left: -3rem;
   top: 0;
   font-size: 0.8em;
-  opacity: 0.8;
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.8));
+  text-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
 }
 
 .hero-subtitle {
@@ -188,7 +190,7 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     text-align: center;
-    padding-top: 100px;
+    padding-top: 25px;
   }
 
   .hero-text {
