@@ -1,0 +1,190 @@
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, var(--background-color) 0%, #1e3c72 100%);
+  color: var(--text-primary);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  border-top: 3px solid var(--cat-orange);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+  color: var(--cat-yellow);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 217, 61, 0.3);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  padding: var(--spacing-xs) 0;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: var(--cat-yellow);
+  transform: translateX(5px);
+}
+
+.footer-link::before {
+  content: "🐾";
+  margin-right: var(--spacing-xs);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footer-contact .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.footer-contact .contact-item:hover {
+  background: rgba(255, 217, 61, 0.1);
+  transform: translateX(5px);
+}
+
+.footer-contact .contact-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+  transition: var(--transition-fast);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+.footer-contact .contact-item:hover .contact-icon {
+  transform: scale(1.2);
+  color: var(--cat-yellow);
+}
+
+.footer-contact .contact-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.copyright-year {
+  color: var(--cat-yellow);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-contact .contact-item {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Animations */
+.footer.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.footer-link,
+.footer-contact .contact-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-link::after,
+.footer-contact .contact-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: var(--cat-yellow);
+  transition: var(--transition-fast);
+}
+
+.footer-link:hover::after,
+.footer-contact .contact-item:hover::after {
+  left: 0;
+}

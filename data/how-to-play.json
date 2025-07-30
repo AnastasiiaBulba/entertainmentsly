@@ -1,0 +1,46 @@
+{
+  "instructions": [
+    {
+      "id": 1,
+      "number": "1",
+      "title": "Tap to Smash",
+      "description": "Simply tap on your target to unleash your feline paw's destructive power. One tap, one smash!",
+      "tip": "Start with easy targets to get the hang of the controls!"
+    },
+    {
+      "id": 2,
+      "number": "2",
+      "title": "Aim with Precision",
+      "description": "Take your time to aim carefully at your targets. Precision is key to successful destruction!",
+      "tip": "Look for the best angle to hit multiple targets!"
+    },
+    {
+      "id": 3,
+      "number": "3",
+      "title": "Avoid Traps",
+      "description": "Watch out for dangerous traps and obstacles that can end your destruction spree early.",
+      "tip": "Plan your moves carefully to avoid getting trapped!"
+    },
+    {
+      "id": 4,
+      "number": "4",
+      "title": "Use Power-ups",
+      "description": "Collect special power-ups that enhance your paw's destructive abilities and help you clear levels faster.",
+      "tip": "Power-ups can turn the tide in difficult situations!"
+    },
+    {
+      "id": 5,
+      "number": "5",
+      "title": "Progress Through Levels",
+      "description": "Complete each level by destroying all targets to unlock the next challenge with increased difficulty.",
+      "tip": "Each level brings new challenges and opportunities!"
+    },
+    {
+      "id": 6,
+      "number": "6",
+      "title": "Master the Paw",
+      "description": "Practice your timing and accuracy to become the ultimate feline destroyer and achieve high scores!",
+      "tip": "The more you play, the better you'll become at smashing!"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+/* Game Section Styles */
+.game-section {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(135deg, #2c3e50 0%, var(--background-color) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="game-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="30" height="30" fill="none" stroke="rgba(255,107,53,0.1)" stroke-width="1"/><circle cx="15" cy="15" r="2" fill="rgba(255,217,61,0.2)"/></pattern></defs><rect width="100" height="100" fill="url(%23game-pattern)"/></svg>');
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.game-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.game-section h2 {
+  text-align: center;
+  color: var(--cat-yellow);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  text-shadow: 0 0 20px rgba(255, 217, 61, 0.5);
+  font-weight: 700;
+}
+
+.game-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--cat-orange);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-frame::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--cat-orange), var(--cat-yellow), var(--cat-pink));
+  border-radius: var(--border-radius-xl);
+  z-index: -1;
+  opacity: 0.3;
+  animation: gameBorderGlow 4s ease-in-out infinite;
+}
+
+@keyframes gameBorderGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.game-frame iframe {
+  width: 100%;
+  max-width: 854px;
+  height: 480px;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  background: #000;
+}
+
+.game-frame iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Game controls overlay */
+.game-controls {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+  z-index: 3;
+}
+
+.game-control-btn {
+  background: rgba(255, 107, 53, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: 1.2rem;
+}
+
+.game-control-btn:hover {
+  background: var(--cat-orange);
+  transform: scale(1.1);
+}
+
+/* Game info */
+.game-info {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.game-info h3 {
+  color: var(--cat-orange);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.game-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Loading state */
+.game-frame.loading {
+  position: relative;
+}
+
+.game-frame.loading::after {
+  content: 'Loading Tarcat...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--cat-yellow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .game-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .game-section h2 {
+    font-size: 2rem;
+  }
+  
+  .game-frame {
+    padding: var(--spacing-sm);
+    margin: 0 var(--spacing-sm);
+  }
+  
+  .game-frame iframe {
+    height: 300px;
+  }
+  
+  .game-controls {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+  
+  .game-control-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .game-frame {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* Game frame animations */
+.game-frame {
+  animation: gameFrameAppear 0.8s ease-out;
+}
+
+@keyframes gameFrameAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hover effects */
+.game-frame:hover::before {
+  animation: gameBorderGlowHover 2s ease-in-out infinite;
+}
+
+@keyframes gameBorderGlowHover {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}

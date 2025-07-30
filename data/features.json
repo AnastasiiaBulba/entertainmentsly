@@ -1,0 +1,40 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "icon": "🐾",
+      "title": "Paw Smashing",
+      "description": "Control a mighty feline paw and smash targets with precision and destructive power."
+    },
+    {
+      "id": 2,
+      "icon": "💥",
+      "title": "Satisfying Destruction",
+      "description": "Experience the thrill of destroying targets with satisfying smash effects and animations."
+    },
+    {
+      "id": 3,
+      "icon": "🎯",
+      "title": "Precision Aiming",
+      "description": "Master the art of precise paw strikes with intuitive one-tap controls."
+    },
+    {
+      "id": 4,
+      "icon": "🏆",
+      "title": "Progressive Levels",
+      "description": "Challenge yourself with multiple levels of increasing difficulty and unique challenges."
+    },
+    {
+      "id": 5,
+      "icon": "⚡",
+      "title": "Power-ups",
+      "description": "Unlock special power-ups and bonuses that enhance your feline destruction abilities."
+    },
+    {
+      "id": 6,
+      "icon": "🎮",
+      "title": "Simple Controls",
+      "description": "Easy to learn, hard to master gameplay perfect for players of all skill levels."
+    }
+  ]
+}
