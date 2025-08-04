@@ -103,6 +103,12 @@ function initContacts() {
       messageDiv.style.transition = "all 0.3s ease";
       messageDiv.style.opacity = "1";
       messageDiv.style.transform = "translateY(0)";
+
+      // Scroll to the message so user can see it
+      messageDiv.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }, 100);
 
     setTimeout(() => {
